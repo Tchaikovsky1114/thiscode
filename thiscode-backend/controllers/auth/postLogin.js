@@ -30,7 +30,7 @@ const postLogin = async(req,res) => {
         }
       })
     }
-    return res.status(400).send('입력하신 정보는 유효하지 않은 정보입니다.')
+    return res.status(400).send('아이디 또는 비밀번호가 잘못되었습니다.')
   }catch(err){
     return res.status(500).send('로그인에 실패하였습니다. 다시 시도해주세요')
   }

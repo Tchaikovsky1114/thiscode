@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 
 interface validateLoginFormProps {
   email:string;
-  password:string;
+  password?:string;
   passwordConfirm?:string;
   username?:string;
 
@@ -36,6 +36,7 @@ const useValid = ({email,password,passwordConfirm,username}:validateLoginFormPro
 
 
   const validatePasswordLength = useCallback(() => {
+    if(!password) return;
     if(password.length > 5 && password.length < 16){
        setPasswordValid(true)
     }else{
@@ -59,12 +60,6 @@ const useValid = ({email,password,passwordConfirm,username}:validateLoginFormPro
     validatePasswordLength()
     validatePasswordConfirmLength()
     validateUsername()
-    
-
-    
-    console.log('passwordValid',passwordValid)
-    console.log('passwordConfirmValid',passwordConfirmValid)
-    console.log(password === passwordConfirm)
   },[email,password,username,passwordConfirm])
 
   return {

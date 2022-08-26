@@ -1,6 +1,6 @@
 
 import styled from '@emotion/styled';
-import {Typography} from '@mui/material';
+import Typography from '@mui/material/Typography';
 
 const RedirectText = styled('span')({
   color: '#00AFF4',

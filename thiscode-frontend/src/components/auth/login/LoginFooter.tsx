@@ -2,18 +2,19 @@ import React, { useState } from 'react';
 import Button from '../../../shared/ui/Button';
 import RedirectMessage from '../../../shared/ui/RedirectMessage';
 import {useNavigate} from 'react-router-dom'
-import {Tooltip} from '@mui/material';
+import Tooltip from '@mui/material/Tooltip';
 
 interface LoginFooterProps {
   isFormValid : boolean;
+  email:string
+  password: string
+  onClick: () => void
 }
 
 const LoginFooter = (props:LoginFooterProps) => {
-  const {isFormValid} = props;
+  const {isFormValid,email,password,onClick} = props;
   const navigate = useNavigate();
-  const clickHandler = () => {
-    console.log('로긴')
-  }
+  
   const redirectToRegisterPageHandler = () => {
     navigate('/register')
   }
@@ -33,7 +34,7 @@ const LoginFooter = (props:LoginFooterProps) => {
     arrow
     >
     <div>
-      <Button label="로그인" additionalStyles={{marginTop: '30px',fontWeight:'bold'}} disabled={!isFormValid} onClick={clickHandler} />
+      <Button label="로그인" additionalStyles={{marginTop: '30px',fontWeight:'bold'}} disabled={!isFormValid} onClick={onClick} />
     </div>
     </Tooltip>
     <RedirectMessage text="아직 가입하지 않으셨나요?" redirectText='계정 생성하러 가기' additionalStyles={{marginTop:'5px'}} redirectHandler={redirectToRegisterPageHandler} />

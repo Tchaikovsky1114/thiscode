@@ -46,7 +46,7 @@ const postRegister = async (req,res) => {
 
 
   } catch (error) {
-    return res.status(500).send('회원가입에 실패하였습니다. 다시 시해도해주세요.')
+    return res.status(500).send('회원가입에 실패하였습니다. 다시 시도해주세요.')
   }
 }
 

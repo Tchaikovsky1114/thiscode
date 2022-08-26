@@ -4,7 +4,7 @@ import Btn from '@mui/material/Button'
 interface ButtonProps {
   label:string;
   additionalStyles:any;
-  disabled:boolean;
+  disabled?:boolean;
   onClick: () => void
 
 }

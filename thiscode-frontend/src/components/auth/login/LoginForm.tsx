@@ -5,12 +5,15 @@ import useValid from '../../../shared/ui/utils/useValid';
 interface LoginFormProps {
   isFormValid: boolean
   setIsFormValid:React.Dispatch<React.SetStateAction<boolean>>
+  email:string
+  setEmail:React.Dispatch<React.SetStateAction<string>>
+  password:string
+  setPassword:React.Dispatch<React.SetStateAction<string>>
 }
 
 const LoginForm = (props:LoginFormProps) => {
-  const {isFormValid,setIsFormValid} = props;
-  const [email,setEmail] = useState('')
-  const [password,setPassword] = useState('')
+  const {isFormValid,setIsFormValid,email,setEmail,password,setPassword} = props;
+
   const {emailValid,passwordValid} = useValid({email,password})
 
   useEffect(() => {
