@@ -21,7 +21,7 @@ interface FriendAvatarProps {
   large?:boolean
 }
 
-const FriendAvatar = ({username,large}:FriendAvatarProps) => {
+const Avatar = ({username,large}:FriendAvatarProps) => {
   return (
     <AvatarPreview style={large ? {height: '80px', width:'80px'} : {}}>
       {username.substring(0,2)}
@@ -29,4 +29,4 @@ const FriendAvatar = ({username,large}:FriendAvatarProps) => {
   );
 };
 
-export default FriendAvatar;
+export default Avatar;

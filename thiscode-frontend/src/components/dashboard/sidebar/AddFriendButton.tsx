@@ -18,7 +18,7 @@ const AddFriendButton = () => {
   }
   return (
     <>
-      <Button additionalStyles={additionalStyles} label='친구 추가하기' onClick={openAddFriendDialogHandler} />
+      <Button additionalStyles={additionalStyles} label='친구 초대하기' onClick={openAddFriendDialogHandler} />
       <AddFriendDialog
       isDialogOpen={isDialogOpen}
       closeDialogHandler = {openAddFriendDialogHandler}

@@ -106,9 +106,8 @@ const authSlice = createSlice({
 
 
 export const {useRegisterMutation,useLoginMutation} = authApi;
-export const {getToken} = authSlice.actions;
 export const authReducer = authSlice.reducer;
-
+export const {getToken,logout} = authSlice.actions;
 
 
 

@@ -11,7 +11,7 @@ const OnlineIndicator = () => {
       position: 'absolute',
       right:'5px'
     }}>
-      <FiberManualRecord />
+      <FiberManualRecord sx={{width:'16px'}} />
     </Box>
   );
 };
